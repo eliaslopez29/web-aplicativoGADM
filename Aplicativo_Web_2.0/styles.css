@@ -1,0 +1,391 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 40px;
+}
+
+.login-box img {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+input {
+    padding: 10px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .login-box {
+        width: 90%; /* Ancho del 90% del contenedor en pantallas más pequeñas */
+        padding: 20px; /* Ajusta el espacio interior */
+    }
+
+    h1 {
+        font-size: 20px; /* Tamaño de fuente más pequeño */
+    }
+
+    input {
+        padding: 10px; /* Ajusta el relleno de los campos de entrada */
+    }
+}
+
+
+
+
+
+
+
+
+
+header {
+    background-color: #2874A6;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-image {
+    max-width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.header-text {
+    animation: moveText 5s linear infinite;
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+ }
+    
+.nav-bar ul {  
+    display: flex;
+    list-style: none;
+
+}
+
+.nav-bar ul li a { 
+    text-decoration: none;
+    display: block;
+    color:#576CBC;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+.nav-bar ul li a ::after{ 
+    display: block;
+    content: "";
+    border-bottom: 2px solid #A5D7E8;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-bar ul li a :hover:after{ 
+    
+    transform: scaleX(1);
+ 
+}
+.nav-bar ul li a.acrive{ 
+    color:#19376D;
+}
+
+
+
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .header-text {
+        font-size: 18px; /* Tamaño de fuente más pequeño para dispositivos pequeños */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle .line {  
+     width: 30px;
+     height: 3px;
+     background: #0B2447;
+     margin: 6px 0;
+    }
+
+    .nav-bar {  
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: white;
+        box-shadow: 0 16px 8px -9px rgba(191, 191, 191, 1);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .nav-bar.active{ 
+        height: 450px;
+    }
+
+    .nav-bar ul {  
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+    }
+    .nav-bar.active ul{ 
+        opacity: 1;
+    }
+
+
+    .nav-bar ul li a{ 
+        margin-bottom: 12px
+
+    
+    }
+
+}
+
+
+
+/* Estilo base del footer */
+footer {
+    background-color: #18A518;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilo de la sección de contacto */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo de cada elemento de contacto */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease; /* Agregar transición */
+}
+
+.contact-item:hover {
+    transform: scale(1.05); /* Efecto de escala al pasar el cursor */
+}
+
+.contact-item img {
+    width: 50px; /* Aumentar el tamaño del ícono */
+    height: 50px;
+    margin-right: 10px; /* Agregar espacio entre el ícono y el texto */
+}
+
+/* Estilo de los íconos con justificación a la izquierda */
+.fa-solid {
+    color: #333; /* Cambiar el color del ícono */
+    text-align: left; /* Justificar el texto a la izquierda */
+}
+
+/* Media query para hacer el footer responsive */
+@media screen and (max-width: 768px) {
+    footer {
+        flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .contact {
+        margin-bottom: 20px;
+    }
+    .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: all 0.3s ease; /* Agregar transición */
+}
+
+}
+
+/* Estilos para hacerlo responsive */
+@media screen and (max-width: 768px) {
+    /* Cambia los estilos del header para pantallas pequeñas */
+    header {
+        text-align: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: static;
+        text-align: center;
+        background-color: transparent;
+    }
+
+    #menu {
+        position: static;
+        background-color: transparent;
+        max-height: none;
+        overflow: visible;
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    #menu li {
+        margin: 0 10px;
+    }
+
+    /* Ajusta el tamaño del logo para pantallas pequeñas */
+    .logo img {
+        max-width: 200px; /* Cambia el tamaño según tus necesidades */
+    }
+
+    /* Estilos para las secciones en pantallas pequeñas */
+    .section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+
+    .animated-button,
+    .button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

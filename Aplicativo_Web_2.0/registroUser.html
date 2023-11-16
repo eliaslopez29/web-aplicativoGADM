@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h2>Registro</h2>
+    <form action="registroUsuario.php" method="POST"  enctype="multipart/form-data" >
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required><br>
+
+        <label for="cedula">Número de Cédula:</label>
+        <input type="text" id="cedula" name="cedula" required><br>
+
+        <label for="residencia">Lugar de Residencia:</label>
+        <input type="text" id="residencia" name="residencia" required><br>
+
+        <label for="usuario">Nombre de Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required><br>
+
+        <input type="submit" value="Registrar">
+    </form>
+</body>
+</html>

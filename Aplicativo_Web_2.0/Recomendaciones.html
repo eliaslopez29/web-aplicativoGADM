@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-Recomendaciones.css">
+    
+    <title>Página de Emergencia</title>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <img src="logores.jpg" alt="Imagen" class="header-image">
+            <h1 class="header-text">COPAE MANGLARALTO RESILIENTE</h1>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Gestion-de-Riesgo.html">Programas Misionales</a></li>
+                <li><a href="registrar-evento.html">Registro de Evento</a></li>
+                <li><a href="registrar-emergencia.html">Registro de Emergencia</a></li>
+                <li><a href="Recomendaciones.html">Recomendaciones</a></li>
+                
+            </ul>
+        </nav>
+    </header> 
+
+
+    <div class="section">
+        <h2><label for="planEmergencia">Plan Familiar</label></h2>
+        <button class="toggle-button" onclick="toggleInfo('planEmergencia')">▼</button>
+        <div class="info" id="planEmergenciaInfo">
+            <iframe width="450" height="315" src="https://www.youtube.com/embed/RHfnZlp6Vwk" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="section">
+        <h2><label for="mochilaEmergencia">Mochila de Emergencia</label></h2>
+        <button class="toggle-button" onclick="toggleInfo('mochilaEmergencia')">▼</button>
+        <div class="info" id="mochilaEmergenciaInfo">
+            <img src="MochilaEmergencia.jpg" alt="Imagen de mochila de emergencia">
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2><label for="Afiche_Inundacion">Afiche de Inundación</label></h2>
+        <button class="toggle-button" onclick="toggleInfo('Afiche_Inundacion')">▼</button>
+        <div class="info" id="Afiche_InundacionInfo">
+            <img src="Afiche_inundacion.jpg" alt="Afiche_Inundacion">
+
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2><label for="Deslizamiento">Deslizamiento Antes</label></h2>
+        <button class="toggle-button" onclick="toggleInfo('Deslizamiento')">▼</button>
+        <div class="info" id="DeslizamientoInfo">
+            <img src="Deslizamiento.jpg" alt="Deslizamiento">
+            
+        </div>
+    </div>
+
+     <div class="section">
+        <h2><label for="mapaRiesgo">Mapa de Riesgo </label></h2>
+        <button class="toggle-button" onclick="toggleInfo('mapaRiesgo')">▼</button>
+        <div class="info" id="mapaRiesgoInfo">
+            <img src="mapa.jpg" alt="mapaRiesgo">
+            
+        </div>
+    </div>
+
+
+
+     <footer>
+        <div class="contact">
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <p>Teléfono: +123456789</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Correo Electrónico: info@example.com</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Ubicación: Dirección de la Parroquia</p>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="LOGOMANGLARALTO.png" alt="COPAE MANGLARTO">
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
